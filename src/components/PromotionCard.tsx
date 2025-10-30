@@ -17,9 +17,9 @@ export const PromotionCard: React.FC<PromotionCardProps> = ({
     setIsInterested(!isInterested);
   };
 
-  const cardClasses = isWide 
-    ? "flex flex-col self-stretch relative aspect-[1.335] min-w-60 min-h-[200px] items-stretch w-[267px] my-auto pt-[111px] pb-4 px-4 rounded-lg"
-    : "flex flex-col self-stretch relative aspect-[0.47] min-h-[200px] w-[94px] items-stretch my-auto pl-4 pt-[111px] pb-4 rounded-lg";
+ const cardClasses = isWide 
+  ? "flex flex-col relative aspect-[1.335] min-w-60 min-h-[200px] w-[267px] my-auto pt-[111px] pb-4 px-4 rounded-lg items-start"
+  : "flex flex-col relative aspect-[0.47] min-h-[200px] w-[94px] my-auto pl-4 pt-[111px] pb-4 rounded-lg items-start";
 
   return (
     <article className={cardClasses}>
