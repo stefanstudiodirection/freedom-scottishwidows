@@ -66,7 +66,13 @@ export const AccountCard: React.FC<AccountCardProps> = ({
   };
 
   const handleSecondaryAction = () => {
-    console.log(`Secondary action for ${type} account`);
+    if (type === 'current') {
+      navigate('/account/currentAccount');
+    } else if (type === 'savings') {
+      navigate('/account/savings');
+    } else if (type === 'pension') {
+      navigate('/account/pension');
+    }
   };
 
   return (
