@@ -44,7 +44,7 @@ export const MoveFunds: React.FC = () => {
   const destination = accounts[destinationAccount];
 
   const handleBack = () => {
-    navigate('/select-destination', { state: { sourceAccount } });
+    navigate('/', { state: { sourceAccount } });
   };
 
   const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
