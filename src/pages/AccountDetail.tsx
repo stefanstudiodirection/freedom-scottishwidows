@@ -2,6 +2,7 @@ import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useAccounts, AccountType } from "@/contexts/AccountContext";
 import { ArrowLeft, ArrowDown, ArrowUp, ArrowRightLeft } from "lucide-react";
+import { CreditCard } from "@/components/CreditCard";
 
 const accountConfig: Record<AccountType, {
   display: string;
@@ -175,20 +176,15 @@ const AccountDetail: React.FC = () => {
             <div className="text-lg ml-2 font-semibold text-foreground">{formatCurrency(account.balance)}</div>
           </div>
           {config.showCard && (
-            <div className="bg-[url('/card-background.webp')] bg-cover bg-center aspect-[16/9] rounded-2xl p-4 flex flex-col items-start justify-center mb-4">
-              <div className="mb-2 text-white font-semibold">Peter Smith</div>
-              <div className="flex gap-2 text-white mb-2 items-center">
-                <span className="tracking-widest text-lg font-mono">•••• 4562</span>
-                {/* Optionally add ellipsis/menu icon here */}
-              </div>
-              <div className="flex justify-between w-full mb-1">
-                <span className="text-xs font-mono text-white opacity-80">Valid 04/28</span>
-                <span className="text-xs font-mono text-white opacity-80">CVV ***</span>
-              </div>
-              <div className="flex justify-between w-full mt-2 items-center">
-                <span className="text-white font-medium text-xs">Mercer</span>
-                <span className="text-white font-bold text-xs">freedom</span>
-              </div>
+            <div className="mb-4">
+              <CreditCard
+                cardholderName="Peter Smith"
+                cardNumber="4562"
+                validUntil="04/28"
+                cvv="***"
+                bankName="Mercer"
+                cardType="freedom"
+              />
             </div>
           )}
           {/* Actions */}

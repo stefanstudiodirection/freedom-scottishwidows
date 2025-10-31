@@ -5,6 +5,7 @@ import { AccountCard } from "./AccountCard";
 import { PromotionCard } from "./PromotionCard";
 import { LearningResourceCard } from "./LearningResourceCard";
 import { BottomNavigation } from "./BottomNavigation";
+import { CreditCard } from "./CreditCard";
 import { useAccounts } from "@/contexts/AccountContext";
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -83,6 +84,17 @@ export const HomeDark: React.FC = () => {
         <Header />
 
         <main className="w-full mt-6 px-4">
+          <div className="mb-6">
+            <CreditCard
+              cardholderName="Peter Smith"
+              cardNumber="4562"
+              validUntil="04/28"
+              cvv="***"
+              bankName="Mercer"
+              cardType="freedom"
+            />
+          </div>
+
           <section aria-label="Account overview" className="w-full">
             <AccountCard
               type="current"
