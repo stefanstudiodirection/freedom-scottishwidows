@@ -32,7 +32,7 @@ export const CreditCard: React.FC<CreditCardProps> = ({
 		//     <span className="text-white font-bold text-xs">{cardType}</span>
 		//   </div>
 		// </div>
-		<div className="relative bg-gradient-to-br from-[#C89B2E] via-[#E4B33D] to-[#B8862A] aspect-[16/9] rounded-2xl p-6 flex flex-col justify-between overflow-hidden">
+		<div className="relative bg-[url('/card-background.webp')] bg-cover bg-center rounded-2xl p-6 flex flex-col justify-between overflow-hidden">
 			{/* Decorative gradient circle */}
 			<div className="absolute -bottom-20 -right-10 w-96 h-96 rounded-full bg-gradient-to-br from-yellow-300/40 to-transparent"></div>
 
