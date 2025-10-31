@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { LearningResourceCard } from '@/components/LearningResourceCard';
+import { BottomNavigation } from '@/components/BottomNavigation';
 
 const mockArticles = [
   {
@@ -34,6 +35,9 @@ const Learn: React.FC = () => {
             onClick={() => navigate(`/learn/${article.id}`)}
           />
         ))}
+      </div>
+      <div className="fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto">
+        <BottomNavigation />
       </div>
     </div>
   );
