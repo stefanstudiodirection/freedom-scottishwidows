@@ -87,7 +87,7 @@ export const CreditCard: React.FC<CreditCardProps> = ({
 			{/* Bottom section */}
 			<div className="flex justify-between items-end relative z-10">
 				{/* Card number */}
-				<div className="text-white text-2xl font-mono tracking-wider">
+				<div className="text-white text-xl font-mono tracking-wider">
 					•••• {cardNumber}
 				</div>
 
