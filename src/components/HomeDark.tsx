@@ -6,8 +6,10 @@ import { PromotionCard } from "./PromotionCard";
 import { LearningResourceCard } from "./LearningResourceCard";
 import { BottomNavigation } from "./BottomNavigation";
 import { CreditCard } from "./CreditCard";
+import { AccountActions } from "./AccountActions";
 import { useAccounts } from "@/contexts/AccountContext";
 import { useNavigate } from 'react-router-dom';
+import { currentAccountActions } from "@/pages/AccountDetail";
 import { ArrowRight } from 'lucide-react';
 
 const mockArticles = [
@@ -93,6 +95,9 @@ export const HomeDark: React.FC = () => {
               bankName="Mercer"
               cardType="freedom"
             />
+            <div className="mt-4">
+              <AccountActions actions={currentAccountActions} />
+            </div>
           </div>
 
           <section aria-label="Account overview" className="w-full">
