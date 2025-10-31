@@ -287,7 +287,7 @@ const AccountDetail: React.FC = () => {
 								className="self-stretch flex items-center gap-1 text-lg text-[#A488F5] font-medium my-auto hover:text-[#9575e8] transition-colors"
 								onClick={() => navigate("/budgeting")}
 							>
-								<span className="text-[#A488F5] self-stretch my-auto">
+								<span className="text-[#A488F5] self-stretch my-auto text-sm">
 									View budget
 								</span>
 								<img
