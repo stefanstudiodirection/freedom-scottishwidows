@@ -150,7 +150,7 @@ export const MoveFunds: React.FC = () => {
         </div>
 
         {/* Transfer Cards */}
-        <div className="flex-1">
+        <div className="">
           {/* Move From Card */}
           <div className="bg-white dark:bg-[#211E1E] border border-border rounded-lg p-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
