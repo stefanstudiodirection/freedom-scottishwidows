@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import {
 	ArrowLeft,
@@ -9,21 +9,16 @@ import {
 	ExternalLink,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import { StatusBar } from "@/components/StatusBar";
 
 export const PensionWarning: React.FC = () => {
 	const navigate = useNavigate();
-	const [dontShowAgain, setDontShowAgain] = useState(false);
 
 	const handleBack = () => {
 		navigate("/");
 	};
 
 	const handleContinue = () => {
-		if (dontShowAgain) {
-			localStorage.setItem("hidePensionWarning", "true");
-		}
 		navigate("/move-funds", {
 			state: {
 				sourceAccount: "pension",

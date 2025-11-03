@@ -51,15 +51,8 @@ export const MoveFunds: React.FC = () => {
 
   const handleBack = () => {
     if (sourceAccount === 'pension') {
-      // Check if pension warning was dismissed
-      const hidePensionWarning = localStorage.getItem('hidePensionWarning') === 'true';
-      if (!hidePensionWarning) {
-        navigate('/pension-warning');
-      } else {
-        navigate('/');
-      }
+      navigate('/pension-warning');
     } else {
-      // For savings or any other account, go back to home
       navigate('/');
     }
   };
