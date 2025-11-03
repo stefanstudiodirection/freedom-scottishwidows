@@ -178,6 +178,20 @@ function getTransactionLabel(type: string) {
 	}
 }
 
+function getMoveFundsButtonStyles(accountId: AccountType, accountColor: string) {
+	if (accountId === "pension") {
+		return {
+			className: "w-full py-3 rounded-lg mb-4 font-regular text-base flex items-center justify-center gap-2 bg-[#211E1E] text-white dark:bg-white dark:text-black",
+			style: {}
+		};
+	}
+	
+	return {
+		className: "w-full py-3 rounded-lg mb-4 font-regular text-black text-base flex items-center justify-center gap-2",
+		style: { backgroundColor: accountColor }
+	};
+}
+
 const AccountDetail: React.FC = () => {
 	const { id } = useParams<{ id: string }>();
 	const navigate = useNavigate();
@@ -255,11 +269,13 @@ const AccountDetail: React.FC = () => {
 							<AccountActions actions={config.actions} />
 						</div>
 					)}
-					{config.moveFundsButton && (
+				{config.moveFundsButton && (() => {
+					const buttonStyles = getMoveFundsButtonStyles(accountId, account.color);
+					return (
 						<button
 							onClick={handleMoveFunds}
-							className="w-full py-3  rounded-lg mb-4 font-regular text-black text-base flex items-center justify-center gap-2"
-							style={{ backgroundColor: account.color }}
+							className={buttonStyles.className}
+							style={buttonStyles.style}
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -275,7 +291,8 @@ const AccountDetail: React.FC = () => {
 							</svg>
 							<span>Move funds</span>
 						</button>
-					)}
+					);
+				})()}
 					{/* TRANSACTIONS */}
 					<div className="mt-6">
 						<div className="flex items-center justify-between mb-4">
