@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { ArrowLeft, AlertTriangle, TrendingDown, Clock } from "lucide-react";
+import { ArrowLeft, AlertTriangle, TrendingDown, Clock, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const SavingsWarning: React.FC = () => {
@@ -101,6 +101,13 @@ export const SavingsWarning: React.FC = () => {
 							</p>
 						</div>
 					</div>
+
+          <button
+						className="w-auto inline-flex items-center gap-2 px-6 py-3 border border-white/20 rounded-md bg-[#211E1E] hover:bg-[#211E1E]/80 transition-colors mb-6 text-white"
+					>
+						<span className="text-sm">Learn more about this topic</span>
+						<ExternalLink className="w-4 h-4" />
+					</button>
 				</div>
 
 				{/* Bottom Actions */}
