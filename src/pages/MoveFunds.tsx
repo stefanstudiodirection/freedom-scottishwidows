@@ -104,12 +104,12 @@ export const MoveFunds: React.FC = () => {
           >
             <ArrowLeft className="w-6 h-6" />
           </button>
-          <h1 className="flex-1 text-center text-lg font-normal pr-12 text-foreground">Move funds</h1>
+          <h1 className="flex-1 text-center text-xl font-normal pr-12 text-foreground">Move funds</h1>
         </header>
 
         {/* Amount Input Section */}
         <div className="flex flex-col items-center mb-6">
-          <p className="text-[#716860] text-base mb-4">Enter amount to move</p>
+          <p className="text-[#716860] text-xl mb-4">Enter amount to move</p>
           <input
             type="tel"
             inputMode="decimal"
@@ -161,13 +161,13 @@ export const MoveFunds: React.FC = () => {
                 <span className="text-2xl">{source.icon}</span>
               </div>
               <div>
-                <p className="text-[#716860] text-sm">Move from</p>
-                <p className="text-foreground text-base font-normal">{source.name}</p>
+                <p className="text-[#716860] text-base">Move from</p>
+                <p className="text-foreground text-xl font-normal">{source.name}</p>
               </div>
             </div>
             <div className="text-right">
-              <p className="text-[#716860] text-sm">Balance</p>
-              <p className="text-foreground text-base font-normal">{formatCurrency(source.balance)}</p>
+              <p className="text-[#716860] text-base">Balance</p>
+              <p className="text-foreground text-xl font-normal">{formatCurrency(source.balance)}</p>
             </div>
           </div>
 
@@ -190,13 +190,13 @@ export const MoveFunds: React.FC = () => {
                 <span className="text-2xl">{destination.icon}</span>
               </div>
               <div>
-                <p className="text-[#716860] text-sm">Move to</p>
-                <p className="text-foreground text-base font-normal">{destination.name}</p>
+                <p className="text-[#716860] text-base">Move to</p>
+                <p className="text-foreground text-xl font-normal">{destination.name}</p>
               </div>
             </div>
             <div className="text-right">
-              <p className="text-[#716860] text-sm">Balance</p>
-              <p className="text-foreground text-base font-normal">{formatCurrency(destination.balance)}</p>
+              <p className="text-[#716860] text-base">Balance</p>
+              <p className="text-foreground text-xl font-normal">{formatCurrency(destination.balance)}</p>
             </div>
           </div>
         </div>

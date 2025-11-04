@@ -321,7 +321,7 @@ const AccountDetail: React.FC = () => {
 											fill="currentColor"
 										/>
 									</svg>
-									<span>Move funds</span>
+									<span className="text-xl">Move funds</span>
 								</button>
 							);
 						})()}
