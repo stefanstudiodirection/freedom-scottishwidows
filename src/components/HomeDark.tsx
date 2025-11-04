@@ -53,9 +53,9 @@ export const HomeDark: React.FC = () => {
       <span>
         <span
           style={{
-            fontFamily: "Arial, -apple-system, Roboto, Helvetica, sans-serif",
-            fontSize: "25px",
-            letterSpacing: "0.5px",
+            fontSize: "24px",
+            letterSpacing: "1.2px",
+            lineHeight: "105%",
           }}
         >
           £{wholePart}
