@@ -80,7 +80,7 @@ export const ReviewTransfer: React.FC = () => {
 
 				{/* Amount Display */}
 				<div className="">
-					<p className="text-foreground text-sm mb-2">Amount to move</p>
+					<p className="text-foreground text-lg mb-2">Amount to move</p>
 					<div className="flex items-center justify-between">
 						<p className="text-foreground text-4xl font-normal">
 							£
@@ -111,15 +111,15 @@ export const ReviewTransfer: React.FC = () => {
 									<span className="text-2xl">{source.icon}</span>
 								</div>
 								<div>
-									<p className="text-[#716860] text-sm">Move from</p>
-									<p className="text-foreground text-base font-normal">
+									<p className="text-[#716860] text-base">Move from</p>
+									<p className="text-foreground text-xl font-normal">
 										{source.name}
 									</p>
 								</div>
 							</div>
 							<div className="text-right">
-								<p className="text-[#716860] text-sm">Balance after transfer</p>
-								<p className="text-foreground text-base font-normal">
+								<p className="text-[#716860] text-base">Balance after transfer</p>
+								<p className="text-foreground text-xl font-normal">
 									£
 									{newSourceBalance.toLocaleString("en-GB", {
 										minimumFractionDigits: 2,
@@ -141,15 +141,15 @@ export const ReviewTransfer: React.FC = () => {
 									<span className="text-2xl">{destination.icon}</span>
 								</div>
 								<div>
-									<p className="text-[#716860] text-sm">Move to</p>
-									<p className="text-foreground text-base font-normal">
+									<p className="text-[#716860] text-base">Move to</p>
+									<p className="text-foreground text-xl font-normal">
 										{destination.name}
 									</p>
 								</div>
 							</div>
 							<div className="text-right">
-								<p className="text-[#716860] text-sm">Balance after transfer</p>
-								<p className="text-foreground text-base font-normal">
+								<p className="text-[#716860] text-base">Balance after transfer</p>
+								<p className="text-foreground text-xl font-normal">
 									£
 									{newDestinationBalance.toLocaleString("en-GB", {
 										minimumFractionDigits: 2,
