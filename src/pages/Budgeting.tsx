@@ -574,7 +574,7 @@ const Budgeting: React.FC = () => {
 
 									<div className="flex items-center justify-between text-sm">
 										<span className="text-muted-foreground">
-											<span style={{ color: category.color }}>
+											<span style={{ color: account.color }}>
 												{formatCurrency(category.spent)}
 											</span>{" "}
 											/ {formatCurrency(category.target)}
