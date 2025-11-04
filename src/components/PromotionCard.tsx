@@ -36,7 +36,7 @@ export const PromotionCard: React.FC<PromotionCardProps> = ({
           {isInterested ? 'Interested!' : 'Limited offer'}
         </span>
       </button>
-      <h3 className="relative text-white text-xl leading-[22px] mt-2">
+      <h3 className="relative text-white text-xl mt-2 leading-[110%]">
         {title}
       </h3>
     </article>
