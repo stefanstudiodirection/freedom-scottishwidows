@@ -8,9 +8,12 @@ export const useAccountCardsStagger = (
 	useGSAP(
 		() => {
 			// const cards = containerRef.current?.querySelectorAll(".account-card");
-      const cards = containerRef.current?.querySelectorAll(".account-card:not(:first-child)");
+			const allCards = containerRef.current?.querySelectorAll(".account-card");
 
-			if (!cards || cards.length === 0) return;
+			if (!allCards || allCards.length === 0) return;
+
+			// Uzmi sve osim prvog iz NodeList-a
+			const cards = Array.from(allCards).slice(1);
 
 			// Prvo odmah postavi poziciju
 			gsap.set(cards, {
@@ -21,7 +24,7 @@ export const useAccountCardsStagger = (
 			// Pa onda animiraj
 			gsap.to(cards, {
 				y: 0,
-        yPercent: 0,
+				yPercent: 0,
 				duration: 0.6,
 				ease: "power2.out",
 				stagger: 0.15,
