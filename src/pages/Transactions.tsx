@@ -26,6 +26,12 @@ const Transactions: React.FC = () => {
 		pension: "Pension",
 	};
 
+	const accountColors: Record<AccountType, string> = {
+		pension: "#211E1E",
+		savings: "#A488F5",
+		currentAccount: "#E4B33D",
+	};
+
 	const filteredTransactions = transactions
 		.filter((t) => t.account === selectedAccount)
 		.sort((a, b) => b.date.getTime() - a.date.getTime());
@@ -95,9 +101,14 @@ const Transactions: React.FC = () => {
 							onClick={() => setSelectedAccount(account)}
 							className={`px-4 py-2 rounded-lg text-base font-normal transition-colors ${
 								selectedAccount === account
-									? "bg-[#A488F5] text-white"
+									? "text-white"
 									: "bg-white dark:bg-[#1C1C1E] text-foreground"
 							}`}
+							style={
+								selectedAccount === account
+									? { backgroundColor: accountColors[account] }
+									: undefined
+							}
 						>
 							{accountLabels[account]}
 						</button>
